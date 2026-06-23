@@ -4,7 +4,7 @@ A Java-based automation framework for a simulated digital banking platform. The 
 
 ## Tech stack
 
-- Java 11
+- Java 17
 - Selenium WebDriver
 - Cucumber BDD
 - TestNG

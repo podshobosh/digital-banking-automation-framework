@@ -10,8 +10,8 @@
     <description>Java test automation framework for UI, API, and database integration testing with Selenium, Cucumber, REST-Assured, JDBC, Maven, and CI reporting.</description>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenium.version>4.43.0</selenium.version>
         <cucumber.version>7.20.1</cucumber.version>
@@ -109,6 +109,11 @@
                         <headless>${headless}</headless>
                         <browser>${browser}</browser>
                     </systemPropertyVariables>
+                    <argLine>
+                        --add-opens java.base/java.lang=ALL-UNNAMED
+                        --add-opens java.base/java.util=ALL-UNNAMED
+                        --add-opens java.base/java.lang.reflect=ALL-UNNAMED
+                    </argLine>
                 </configuration>
             </plugin>
             <plugin>
